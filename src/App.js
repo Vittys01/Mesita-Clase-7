@@ -1,20 +1,17 @@
-import './App.css';
-import Container from './components/Container';
-
-function App() {
-  
-  const perros = [
-    {id: 1, name: "Firualis", age: 11, sex: "Macho", breed: "Pastor aleman", size: "Grande"},
-    {id: 2, name: "Maya", age: 13, sex: "Hembra", breed: "Pitbul", size: "Mediano"},
-    {id: 3, name: "Pipo", age:5, sex: "Macho", breed: "Schnauzer", size: "Mediano"},
-    {id: 4, name: "Pacha", age:2, sex: "Hembra", breed: "Mestizo", size: "Chico"}
-  ]
-  
-  return (
-    <>
-    <Container animals={perros}></Container>
-    </>
-  );
+import React from "react";
+import H1 from "../src/components/h1"
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  state = ["HOLA","HOLA","HOLA","MUNDO"];
+  render() {
+    return (
+    <div>
+      {this.state.map((value)=><H1 palabra={value}></H1>)}
+    </div>
+    )
+  }
 }
 
 export default App;
